@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book</title>
+  <link rel="icon" href="/final-project-web/assets/favicon-DNnjKBtP.ico" type="image/x-icon">
+  <script type="module" crossorigin src="/final-project-web/assets/main-CNjo6mIv.js"></script>
+  <link rel="stylesheet" crossorigin href="/final-project-web/assets/main-CuI8Hgoq.css">
+  <link rel="stylesheet" crossorigin href="/final-project-web/assets/book-t_a1axVk.css">
+</head>
+<body>
+  <header></header>
+
+  <section class="booking-container">
+    <div class="booking-card">
+      <h2>Schedule an Appointment</h2>
+      <form id="booking-form">
+        <label>Name:
+          <input type="text" id="name" required placeholder="e.g. John Doe"/>
+        </label>
+        <label>Email:
+          <input type="email" id="email" required placeholder="e.g. john@example.com"/>
+        </label>
+        <label>Select Package:
+          <select id="package">
+            <option value="1">1 Session/Week - $40 USD</option>
+            <option value="2">2 Sessions/Week - $70 USD</option>
+            <option value="4">4 Sessions/Week - $140 USD</option>
+          </select>
+        </label>
+        <label>Date:
+          <input type="date" required/>
+        </label>
+        <label>Comments:
+          <textarea placeholder="Any additional info..."></textarea>
+        </label>
+        <button type="submit">Confirm Appointment</button>
+      </form>
+      <div id="package-info" class="package-message hidden"></div>
+    </div>
+  </section>
+
+  <script src="src/js/formHints.js"></script>
+  <script src="src/js/book.js"></script>
+</body>
+<!-- Modales flotantes -->
+  <div id="hint-popup" class="hint-popup hidden"></div>
+
+<!-- Modal lateral para paquete -->
+<div id="package-modal" class="package-modal hidden"></div>
+
+</html>
