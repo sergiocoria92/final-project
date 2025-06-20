@@ -1,0 +1,87 @@
+/* Fonts */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #B39DDB;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para el nav */
+}
+
+/* Title */
+nav h1 {
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra de texto sutil */
+  transition: all 0.3s ease; /* Transición para efectos hover */
+}
+
+nav h1:hover {
+  transform: translateY(-1px); /* Efecto de levitación */
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hover */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; /* Más espacio entre items */
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem; /* Más área de click */
+  border-radius: 6px; /* Bordes redondeados */
+  transition: all 0.3s ease; /* Transición suave */
+  position: relative;
+}
+
+/* Efecto hover moderno */
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+  transform: translateY(-2px); /* Levitación */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Efecto "pulsante" al hacer clic */
+nav a:active {
+  transform: translateY(0);
+}
+
+/* Línea decorativa bajo los items (opcional) */
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 70%; /* Línea que crece al hacer hover */
+}
+
+/* Efecto para el item activo (si usas JavaScript para marcar la página actual) */
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Efecto de "glow" sutil en hover (opcional) */
+nav a:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}

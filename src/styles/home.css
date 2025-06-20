@@ -1,0 +1,89 @@
+
+.hero {
+  background-color: #A5D6A7;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #B39DDB;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+/*image and text*/
+/*image and text*/
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente los elementos internos */
+  text-align: center; /* Centra el texto */
+}
+
+.hero-text img.logo {
+  margin: 1.5rem 0; /* Espacio arriba y abajo de la imagen */
+  display: block; /* Para que el margin funcione correctamente */
+}
+
+.hero-text .btn {
+  margin-top: 1.5rem; /* Espacio entre imagen y botón */
+  align-self: center; /* Centra el botón (opcional si ya está centrado por el align-items del hero-text) */
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Estilos del botón */
+/* Estilos del botón - Versión mejorada */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #3498db; /* Color azul más moderno */
+  color: white;
+  text-decoration: none;
+  border-radius: 6px; /* Bordes un poco más redondeados */
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transición suave para todos los efectos */
+  box-shadow: 0 2px 5px rgba(52, 152, 219, 0.2); /* Sombra sutil inicial */
+}
+
+.btn:hover {
+  background-color: #2980b9; /* Color más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de levitación */
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3); /* Sombra más pronunciada al hover */
+}
+
+.btn:active {
+  transform: translateY(0); /* Efecto de "presionado" al hacer clic */
+}
+/*end*/
