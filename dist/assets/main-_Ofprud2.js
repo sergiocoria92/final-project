@@ -1,0 +1,1 @@
+import{l as n,a as o}from"./footer-6-9Lo2Fa.js";document.addEventListener("DOMContentLoaded",()=>{n(),o()});document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("booking-form");e&&e.addEventListener("submit",t=>{t.preventDefault(),alert("Your appointment has been scheduled!"),e.reset()})});
