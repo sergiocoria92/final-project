@@ -1,11 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me</title>
-  <link rel="icon" href="/final-project/images/favicon_ikal_light/favicon.ico" type="image/x-icon">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/styles/footer.css">
+  <link rel="stylesheet" href="src/styles/aboutme.css">
+  <link rel="stylesheet" href="src/styles/header.css">
+  <link rel="icon" href="public/images/favicon_ikal_light/favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <header> <!-- Igual --> </header>
   <main>
     <section class="about-me">
       <h1>About Me</h1>
@@ -13,16 +18,19 @@
       <p>Feel free to explore and learn more about me!</p>
     </section>
 
-    <div class="photos-container">
-      <section class="events">
-        <h2>Memory Photos</h2>
-        <div class="grid-container">
-          <!-- Aquí se cargarán las tarjetas dinámicamente con JavaScript -->
-        </div>
-      </section>
-    </div>
+
+
+  <div class="photos-container">
+    <section class="events">
+      <h2>Memory Photos</h2>
+      <div class="grid-container">
+        <!-- Aquí se cargarán las tarjetas dinámicamente con JavaScript -->
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="src/js/main.js"></script>
+  <script type="module" src="src/js/aboutme.js"></script> <!-- NUEVO: script para galería -->
   </main>
-
-
 </body>
 </html>
