@@ -6,6 +6,10 @@ import '../styles/home.css';
 import '../styles/header.css';
 import '../styles/footer.css';
 
+// En tu home.js AGREGA esto al inicio:
+import '../public/images/mariana.jpeg'; // Fuerza a Vite a procesar la imagen
+import '../public/images/ikal.jpeg';
+
 import { loadHeader } from './header.js';
 import { loadFooter } from './footer.js';
 
