@@ -208,12 +208,13 @@
 
 /*citas/frases*/
 .advice-message {
-  margin: 2rem auto;
-  max-width: 500px;
+  background-color: #eef6f8;
+  color: #333;
   font-style: italic;
-  font-size: 1.1rem;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  border-left: 4px solid #2b8a9e;
+  border-radius: 4px;
   text-align: center;
-  color: #555;
-  border-top: 1px solid #ccc;
-  padding-top: 1rem;
 }

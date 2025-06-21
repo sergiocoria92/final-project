@@ -48,9 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Mostrar consejo motivacional
 // Mostrar consejo motivacional en la parte superior
+// Mostrar consejo motivacional en la parte superior de la página
 async function loadAdvice() {
   try {
-    const response = await fetch("https://api.adviceslip.com/advice");
+    const response = await fetch("https://api.adviceslip.com/advice", {
+      cache: "no-cache" // evitar que Vite use versiones guardadas
+    });
     const data = await response.json();
     const adviceText = data.slip.advice;
 
@@ -58,10 +61,17 @@ async function loadAdvice() {
     adviceContainer.classList.add("advice-message");
     adviceContainer.textContent = `"${adviceText}"`;
 
-    // Insertarlo al inicio del main o del body
-    const main = document.querySelector("main") || document.body;
-    main.insertBefore(adviceContainer, main.firstChild);
+    // Insertar antes del contenido principal
+    const main = document.querySelector("main");
+    if (main) {
+      main.insertBefore(adviceContainer, main.firstChild);
+    } else {
+      document.body.insertBefore(adviceContainer, document.body.firstChild);
+    }
   } catch (error) {
-    console.error("Error fetching advice:", error);
+    console.error("Error loading advice:", error);
   }
 }
+
+document.addEventListener("DOMContentLoaded", loadAdvice);
+
