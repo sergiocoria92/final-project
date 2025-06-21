@@ -1,7 +1,13 @@
+import { PageLogger } from './PageLogger.js';
+
 export function loadFooter() {
+  const logger = new PageLogger(document.title);
+  const logMessage = logger.getMessage();
+
   const html = `
     <footer>
       <p>&copy; 2025 Mindful Therapy. All rights reserved.</p>
+      <p class="page-logger">${logMessage}</p>
       <div class="social-links">
         <a href="https://www.facebook.com/share/19otW9BnJE/" target="_blank" rel="noopener">
           <img src="images/facebook.svg" alt="Facebook" class="social-icon">

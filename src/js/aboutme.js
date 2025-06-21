@@ -30,3 +30,37 @@ async function loadEventData() {
     console.error("Error loading event data:", error);
   }
 }
+
+
+/*hambruguesa*/
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  }
+});
+
+
+// Mostrar consejo motivacional
+// Mostrar consejo motivacional en la parte superior
+async function loadAdvice() {
+  try {
+    const response = await fetch("https://api.adviceslip.com/advice");
+    const data = await response.json();
+    const adviceText = data.slip.advice;
+
+    const adviceContainer = document.createElement("div");
+    adviceContainer.classList.add("advice-message");
+    adviceContainer.textContent = `"${adviceText}"`;
+
+    // Insertarlo al inicio del main o del body
+    const main = document.querySelector("main") || document.body;
+    main.insertBefore(adviceContainer, main.firstChild);
+  } catch (error) {
+    console.error("Error fetching advice:", error);
+  }
+}

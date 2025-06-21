@@ -52,3 +52,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000);
   });
 });
+
+
+/*Quotable API */
+// Mostrar cita inspiradora
+// Mostrar cita inspiradora
+async function loadQuote() {
+  try {
+    const response = await fetch("https://api.quotable.io/random");
+    const data = await response.json();
+    const quote = `"${data.content}" — ${data.author}`;
+
+    const quoteBox = document.createElement("div");
+    quoteBox.classList.add("quote-box");
+    quoteBox.textContent = quote;
+
+    document.querySelector(".booking-card").appendChild(quoteBox);
+  } catch (error) {
+    console.error("Error fetching quote:", error);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadQuote);
+
