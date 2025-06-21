@@ -58,13 +58,14 @@
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
-
+/*size*/
 .photo-card img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
+  height: auto;
+  object-fit: contain;
 }
+/**/
+
 
 .caption {
   padding: 10px;

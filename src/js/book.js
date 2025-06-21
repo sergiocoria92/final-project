@@ -54,20 +54,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ✅ Mostrar frase inspiradora (Quotable API)
-  fetch("https://api.quotable.io/random")
-    .then(res => res.json())
-    .then(data => {
-      const quote = `"${data.content}" — ${data.author}`;
-      const quoteBox = document.createElement("div");
-      quoteBox.classList.add("quote-box");
-      quoteBox.textContent = quote;
-
-      const container = document.querySelector(".booking-card");
-      if (container) {
-        container.appendChild(quoteBox);
-      }
-    })
-    .catch(error => {
-      console.error("Error fetching quote:", error);
-    });
-});
+fetch("https://api.chucknorris.io/jokes/random")
+  .then(res => res.json())
+  .then(data => {
+    const quote = `"${data.value}" — Chuck Norris API`;
+    const quoteHTML = `<div class="quote-box">${quote}</div>`;
+    const container = document.querySelector(".booking-card");
+    if (container) {
+      container.insertAdjacentHTML("beforeend", quoteHTML);
+    }
+  })
+  .catch(error => {
+    console.error("Error fetching joke:", error);
+  })})
