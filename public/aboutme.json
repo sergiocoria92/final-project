@@ -1,26 +1,26 @@
 [
   {
-    "title": "First concert",
-    "description": "A few minutes before the event starts. Event in 2023, Querétaro, Qro",
+    "title": "Obtaining a university degree",
+    "description": "Receiving her bachelor's degree from the UAQ (Autonomous University of Querétaro)",
     "url": "images/aboutme/aboutme1.jpeg",
     "date": "2023-01-01"
   },
   {
-    "title": "First vive latino",
-    "description": "One of the most important events in Mexico, with many bands and people. Event in 2023, Mexico City",
+    "title": "Entrepreneurship with women",
+    "description": "First clinic supporting women, boys, and girls of Querétaro—100% Indigenous",
     "url": "images/aboutme/aboutme2.jpeg",
-    "date": "2023-02-20"
+    "date": "2024-02-20"
   },
   {
-    "title": "First concert",
-    "description": "A few minutes before the event starts. Event in 2023, Querétaro, Qro",
+    "title": "Developing social programs",
+    "description": "Creating social programs to support women affected by abuse or family harm, completely free and with support from the government of Querétaro",
     "url": "images/aboutme/aboutme1.jpeg",
-    "date": "2023-01-01"
+    "date": "2025-01-01"
   },
   {
-    "title": "First vive latino",
-    "description": "One of the most important events in Mexico, with many bands and people. Event in 2023, Mexico City",
+    "title": "Obtaining a diploma",
+    "description": "Thanatology diploma and involvement in supporting people who are victims of family loss, through patients and government support.",
     "url": "images/aboutme/aboutme2.jpeg",
-    "date": "2023-02-20"
+    "date": "2025-02-20"
   }
 ]
