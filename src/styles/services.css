@@ -225,3 +225,16 @@
     display: none;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .services-grid {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mobile-booking-row {
+    display: none;
+  }
+}

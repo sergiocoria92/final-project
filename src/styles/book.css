@@ -269,7 +269,7 @@ button:hover {
   color: #333;
 }
 
-/*cuadros para moviles*/
+/*cuadros para*/
 
 .mobile-booking-row {
   display: none; /* Oculto por defecto en desktop */
@@ -306,4 +306,3 @@ button:hover {
     display: none;
   }
 }
-
