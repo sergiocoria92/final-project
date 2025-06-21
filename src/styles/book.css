@@ -268,3 +268,41 @@ button:hover {
   font-style: italic;
   color: #333;
 }
+
+/*cuadros para moviles*/
+
+.mobile-booking-row {
+  display: none; /* Oculto por defecto en desktop */
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-booking-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+
+  .package-info-mobile {
+    font-size: 1rem;
+    color: #333;
+    max-width: 70%;
+  }
+
+  .book-button button {
+    padding: 0.5rem 1rem;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+
+  /* También puedes ocultar el form normal en móvil si es necesario */
+  .booking-card form {
+    display: none;
+  }
+}

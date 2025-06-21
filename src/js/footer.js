@@ -6,7 +6,7 @@ export function loadFooter() {
 
   const html = `
     <footer>
-      <p>&copy; 2025 Mindful Therapy. All rights reserved.</p>
+      <p>&copy; 2025 <br>Sergio Coria</p>
       <p class="page-logger">${logMessage}</p>
       <div class="social-links">
         <a href="https://www.facebook.com/share/19otW9BnJE/" target="_blank" rel="noopener">
