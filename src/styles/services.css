@@ -233,8 +233,49 @@
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (max-width: 768px) {
   .mobile-booking-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    flex-wrap: nowrap;
+  }
+
+  .package-info-mobile {
+    flex: 1;
+    font-size: 0.95rem;
+    color: #333;
+    padding-right: 1rem;
+    line-height: 1.4;
+  }
+
+  .book-button {
+    flex-shrink: 0;
+  }
+
+  .book-button a {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  .book-button a:hover {
+    background-color: #2980b9;
+  }
+
+  .booking-card {
     display: none;
   }
 }
+
