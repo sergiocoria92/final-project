@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Lógica del formulario
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
   const packageSelect = document.getElementById("package");
@@ -51,27 +52,22 @@ document.addEventListener("DOMContentLoaded", () => {
       packageModal.classList.add("hidden");
     }, 5000);
   });
+
+  // ✅ Mostrar frase inspiradora (Quotable API)
+  fetch("https://api.quotable.io/random")
+    .then(res => res.json())
+    .then(data => {
+      const quote = `"${data.content}" — ${data.author}`;
+      const quoteBox = document.createElement("div");
+      quoteBox.classList.add("quote-box");
+      quoteBox.textContent = quote;
+
+      const container = document.querySelector(".booking-card");
+      if (container) {
+        container.appendChild(quoteBox);
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching quote:", error);
+    });
 });
-
-
-/*Quotable API */
-// Mostrar cita inspiradora
-// Mostrar cita inspiradora
-async function loadQuote() {
-  try {
-    const response = await fetch("https://api.quotable.io/random");
-    const data = await response.json();
-    const quote = `"${data.content}" — ${data.author}`;
-
-    const quoteBox = document.createElement("div");
-    quoteBox.classList.add("quote-box");
-    quoteBox.textContent = quote;
-
-    document.querySelector(".booking-card").appendChild(quoteBox);
-  } catch (error) {
-    console.error("Error fetching quote:", error);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", loadQuote);
-
