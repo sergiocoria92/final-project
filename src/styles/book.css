@@ -118,6 +118,21 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
+/* Modal */
+.package-modal {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff8e1;
+  border-left: 4px solid #7E57C2;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  font-size: 14px;
+  max-width: 250px;
+  z-index: 99;
+  animation: slideIn 0.4s ease-out;
+}
 
 .modal-content {
   background-color: white;
@@ -137,21 +152,7 @@ button:hover {
   cursor: pointer;
 }
 
-/* Modal lateral para paquete */
-.package-modal {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #fff8e1;
-  border-left: 4px solid #7E57C2;
-  padding: 15px 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
-  font-size: 14px;
-  max-width: 250px;
-  z-index: 99;
-  animation: slideIn 0.4s ease-out;
-}
+
 
 @keyframes slideIn {
   from {
@@ -302,4 +303,27 @@ button:hover {
   }
 
 
+}
+
+
+.success-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-weight: bold;
+  z-index: 9999;
+  animation: fadeInOut 4s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
 }

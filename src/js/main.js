@@ -2,7 +2,7 @@ import { loadHeader } from './header.js';
 import { loadFooter } from './footer.js';
 import { PageLogger } from './PageLogger.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {//DOM
   loadHeader();
   loadFooter();
 

@@ -1,16 +1,18 @@
-document.addEventListener("DOMContentLoaded", loadEventData);
-
+document.addEventListener("DOMContentLoaded", () => { //DOM
+  loadEventData();
+  loadAdvice();
+});
+/*ASYNC*/
 async function loadEventData() {
   const container = document.querySelector(".grid-container");
   if (!container) return;
 
   try {
     const response = await fetch("aboutme.json");
-
     const data = await response.json();
 
-    container.innerHTML = ""; // Limpia el contenedor
-
+    container.innerHTML = ""; 
+/*DOM*/
     data.forEach(event => {
       const card = document.createElement("div");
       card.classList.add("photo-card");
@@ -21,7 +23,17 @@ async function loadEventData() {
         </div>
         <img src="${event.url}" alt="${event.title}" loading="lazy">
         <div class="description">
-          <small>${event.description}</small>
+          <p><strong>Description:</strong> ${event.description}</p>
+          <p><strong>Date:</strong> ${event.date}</p>
+          <p><strong>Location:</strong> ${event.location}</p>
+          <p><strong>Highlight:</strong> ${event.highlight}</p>
+          <p><strong>Impact:</strong> ${event.impact}</p>
+          <p><strong>Category:</strong> ${event.category}</p>
+          <p><strong>Emotion:</strong> ${event.emotion}</p>
+          <p><strong>Testimonial:</strong> <em>${event.testimonial}</em></p>
+        </div>
+        <div class="external-link">
+          <a href="${event.mediaLink}" target="_blank">View More</a>
         </div>
       `;
 
@@ -31,17 +43,11 @@ async function loadEventData() {
     console.error("Error loading event data:", error);
   }
 }
-
-
-
-
-// Mostrar consejo motivacional
-// Mostrar consejo motivacional en la parte superior
-// Mostrar consejo motivacional en la parte superior de la página
+/*API ADVIDES SLIP*/
 async function loadAdvice() {
   try {
     const response = await fetch("https://api.adviceslip.com/advice", {
-      cache: "no-cache" // evitar que Vite use versiones guardadas
+      cache: "no-cache"
     });
     const data = await response.json();
     const adviceText = data.slip.advice;
@@ -50,7 +56,6 @@ async function loadAdvice() {
     adviceContainer.classList.add("advice-message");
     adviceContainer.textContent = `"${adviceText}"`;
 
-    // Insertar antes del contenido principal
     const main = document.querySelector("main");
     if (main) {
       main.insertBefore(adviceContainer, main.firstChild);
@@ -61,6 +66,3 @@ async function loadAdvice() {
     console.error("Error loading advice:", error);
   }
 }
-
-document.addEventListener("DOMContentLoaded", loadAdvice);
-

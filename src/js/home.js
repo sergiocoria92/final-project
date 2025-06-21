@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { //DOM
   const form = document.getElementById("booking-form");
   if (form) {
     form.addEventListener("submit", (e) => {
