@@ -301,8 +301,5 @@ button:hover {
     border-radius: 4px;
   }
 
-  /* También puedes ocultar el form normal en móvil si es necesario */
-  .booking-card form {
-    display: none;
-  }
+
 }
