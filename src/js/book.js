@@ -67,3 +67,27 @@ fetch("https://api.chucknorris.io/jokes/random")
   .catch(error => {
     console.error("Error fetching joke:", error);
   })})
+/*LocalStorage */
+
+  const form = document.getElementById("booking-form");
+
+  // Guardar en localStorage al enviar el formulario
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    localStorage.setItem("name", nameInput.value);
+    localStorage.setItem("email", emailInput.value);
+    localStorage.setItem("package", packageSelect.value);
+
+    alert("Appointment data saved!");
+    form.reset();
+  });
+
+  // Recuperar datos si existen
+  const savedName = localStorage.getItem("name");
+  const savedEmail = localStorage.getItem("email");
+  const savedPackage = localStorage.getItem("package");
+
+  if (savedName) nameInput.value = savedName;
+  if (savedEmail) emailInput.value = savedEmail;
+  if (savedPackage) packageSelect.value = savedPackage;

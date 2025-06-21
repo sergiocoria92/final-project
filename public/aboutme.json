@@ -3,24 +3,56 @@
     "title": "Obtaining a university degree",
     "description": "Receiving her bachelor's degree from the UAQ (Autonomous University of Querétaro)",
     "url": "images/aboutme/aboutme1.jpeg",
-    "date": "2023-01-01"
+    "date": "2023-01-01",
+    "location": "Querétaro, Mexico",
+    "highlight": "Graduated with honors",
+    "impact": "Inspired 100+ students",
+    "mediaLink": "https://example.com/story1",
+    "category": "Education",
+    "emotion": "Pride",
+    "testimonial": "An unforgettable moment of growth and achievement.",
+    "visibility": "public"
   },
   {
     "title": "Entrepreneurship with women",
     "description": "First clinic supporting women, boys, and girls of Querétaro—100% Indigenous",
     "url": "images/aboutme/aboutme2.jpeg",
-    "date": "2024-02-20"
+    "date": "2024-02-20",
+    "location": "Querétaro, Mexico",
+    "highlight": "Opened with local support",
+    "impact": "Helped 200+ families",
+    "mediaLink": "https://example.com/story2",
+    "category": "Community",
+    "emotion": "Hope",
+    "testimonial": "The beginning of a powerful movement.",
+    "visibility": "public"
   },
   {
     "title": "Developing social programs",
     "description": "Creating social programs to support women affected by abuse or family harm, completely free and with support from the government of Querétaro",
     "url": "images/aboutme/aboutme1.jpeg",
-    "date": "2025-01-01"
+    "date": "2025-01-01",
+    "location": "Querétaro, Mexico",
+    "highlight": "Recognized by city council",
+    "impact": "Reached over 500 individuals",
+    "mediaLink": "https://example.com/story3",
+    "category": "Social work",
+    "emotion": "Empowerment",
+    "testimonial": "We saw real change happen.",
+    "visibility": "private"
   },
   {
     "title": "Obtaining a diploma",
     "description": "Thanatology diploma and involvement in supporting people who are victims of family loss, through patients and government support.",
     "url": "images/aboutme/aboutme2.jpeg",
-    "date": "2025-02-20"
+    "date": "2025-02-20",
+    "location": "Querétaro, Mexico",
+    "highlight": "Thanatology Certified",
+    "impact": "Helped families heal",
+    "mediaLink": "https://example.com/story4",
+    "category": "Therapy",
+    "emotion": "Compassion",
+    "testimonial": "It changed my perspective forever.",
+    "visibility": "public"
   }
 ]
