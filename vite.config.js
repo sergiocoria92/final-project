@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: '/final-project-web/', // nombre del repo en GitHub
+  base: './', // ← Esto arregla las rutas para producción en Netlify
   build: {
     rollupOptions: {
       input: {
