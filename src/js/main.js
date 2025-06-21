@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadHeader();
   loadFooter();
 
-  const logger = new PageLogger(document.title);
-  logger.logVisit();
+const logger = new PageLogger(document.title);
+console.log(logger.getMessage());
+
 });

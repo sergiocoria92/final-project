@@ -5,7 +5,8 @@ async function loadEventData() {
   if (!container) return;
 
   try {
-    const response = await fetch("/aboutme.json");
+    const response = await fetch("aboutme.json");
+
     const data = await response.json();
 
     container.innerHTML = ""; // Limpia el contenedor
