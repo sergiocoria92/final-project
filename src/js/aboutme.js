@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => { //DOM
   loadEventData();
   loadAdvice();
 });
+
 /*ASYNC*/
 async function loadEventData() {
   const container = document.querySelector(".grid-container");
@@ -11,11 +12,21 @@ async function loadEventData() {
     const response = await fetch("aboutme.json");
     const data = await response.json();
 
-    container.innerHTML = ""; 
-/*DOM*/
+    container.innerHTML = "";
+
+    /*DOM*/
     data.forEach(event => {
+      // ✅ CAMBIO: omitir eventos privados
+      if (event.visibility !== "public") return;
+
       const card = document.createElement("div");
       card.classList.add("photo-card");
+
+      // ✅ CAMBIO: agregar clase según categoría
+      if (event.category) {
+        card.classList.add(`cat-${event.category.toLowerCase().replace(/\s+/g, '-')}`);
+      }
+
 
       card.innerHTML = `
         <div class="caption">
@@ -43,7 +54,8 @@ async function loadEventData() {
     console.error("Error loading event data:", error);
   }
 }
-/*API ADVIDES SLIP*/
+
+/*API ADVICE SLIP*/
 async function loadAdvice() {
   try {
     const response = await fetch("https://api.adviceslip.com/advice", {

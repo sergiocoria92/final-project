@@ -327,3 +327,50 @@ button:hover {
   90% { opacity: 1; }
   100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
 }
+
+/*LOCATION - time zone*/
+.booking-card {
+  position: relative;
+  overflow: hidden; /* hace que el banner parezca entrar desde adentro */
+}
+.timezone-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1e88e5;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  border-bottom: 2px solid white;
+  animation: bannerSlide 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+.timezone-banner strong {
+  font-weight: 600;
+}
+
+@keyframes bannerSlide {
+  0% {
+    transform: translateY(-100%); /* completamente oculto arriba */
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0); /* baja a posición visible */
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(0); /* se queda visible */
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(-100%); /* vuelve a subir */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
