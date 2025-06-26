@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   nameInput.addEventListener("focus", () => {
     showHint(nameInput, "Enter your full name, e.g. John Doe.");
   });
-
+/*java*/
   emailInput.addEventListener("focus", () => {
     showHint(emailInput, "Use a valid email, e.g. john@example.com.");
   });

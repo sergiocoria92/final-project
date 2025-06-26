@@ -74,8 +74,8 @@ button {
   cursor: pointer;
 
 }
-
-button:hover {
+/**/
+button:hover { 
   background-color: #5E35B1;
 }
 
@@ -153,7 +153,7 @@ button:hover {
 }
 
 
-
+/*keyfremes slidein*/
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -320,8 +320,8 @@ button:hover {
   z-index: 9999;
   animation: fadeInOut 4s ease-in-out;
 }
-
-@keyframes fadeInOut {
+/*animations*/
+@keyframes fadeInOut { 
   0% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
   10% { opacity: 1; transform: translateX(-50%) translateY(0); }
   90% { opacity: 1; }
